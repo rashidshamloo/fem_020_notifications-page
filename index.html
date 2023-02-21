@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <title>News Homepage</title>
+    <script src="assets/scripts/script.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+      <div class="notifications">
+        <div class="notifications__header">
+          <h2>Notifications</h2>
+          <div class="notifications__number">3</div>
+          <a href="#" onclick="return markAllRead();">Mark all as read</a>
+        </div>
+        <div class="notifications__body">
+          <div class="notifications__item notifications__item--unread">
+            <img src="assets/images/avatar-mark-webber.webp" />
+            <div class="notifications__message">
+              <p>
+                <a href="#" class="notifications__name-link">Mark Webber</a
+                >reacted to your recent post
+                <a href="#" class="notifications__post-link"
+                  >My first tournament today!</a
+                >
+                <span
+                  class="notifications__unread-icon"
+                  aria-hidden="true"
+                ></span>
+              </p>
+              <div class="notifications__time">1m ago</div>
+            </div>
+          </div>
+          <div class="notifications__item notifications__item--unread">
+            <img src="assets/images/avatar-angela-gray.webp" />
+            <div class="notifications__message">
+              <p>
+                <a href="#" class="notifications__name-link">Angela Gray</a
+                >followed you<span
+                  class="notifications__unread-icon"
+                  aria-hidden="true"
+                ></span>
+              </p>
+              <div class="notifications__time">5m ago</div>
+            </div>
+          </div>
+          <div class="notifications__item notifications__item--unread">
+            <img src="assets/images/avatar-jacob-thompson.webp" />
+            <div class="notifications__message">
+              <p>
+                <a href="#" class="notifications__name-link">Jacob Thompson</a
+                >has joined your group
+                <a href="#" class="notifications__group-link">Chess Club</a
+                ><span
+                  class="notifications__unread-icon"
+                  aria-hidden="true"
+                ></span>
+              </p>
+              <div class="notifications__time">1 day ago</div>
+            </div>
+          </div>
+          <div class="notifications__item">
+            <img src="assets/images/avatar-rizky-hasanuddin.webp" />
+            <div class="notifications__message">
+              <p>
+                <a href="#" class="notifications__name-link">Rizky Hasanuddin</a
+                >sent you a private message
+              </p>
+              <div class="notifications__time">5 days ago</div>
+              <a class="notifications__private-message">
+                <p>
+                  Hello, thanks for setting up the Chess Club. I've been a
+                  member for a few weeks now and I'm already having lots of fun
+                  and improving my game.
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="notifications__item">
+            <img src="assets/images/avatar-kimberly-smith.webp" />
+            <div class="notifications__message">
+              <p>
+                <a href="#" class="notifications__name-link">Kimberly Smith</a
+                >commented on your picture
+              </p>
+              <div class="notifications__time">1 week ago</div>
+            </div>
+            <a
+              href="#"
+              class="notifications__image-link"
+              aria-label="Chess Image"
+            >
+              <img
+                src="assets/images/image-chess.webp"
+                alt="chess"
+                aria-hidden="true"
+            /></a>
+          </div>
+          <div class="notifications__item">
+            <img src="assets/images/avatar-nathan-peterson.webp" />
+            <div class="notifications__message">
+              <p>
+                <a href="#" class="notifications__name-link">Nathan Peterson</a
+                >reacted to your recent post
+                <a href="#" class="notifications__post-link"
+                  >5 end-game strategies to increase your win rate</a
+                >
+              </p>
+              <div class="notifications__time">2 weeks ago</div>
+            </div>
+          </div>
+          <div class="notifications__item">
+            <img src="assets/images/avatar-anna-kim.webp" />
+            <div class="notifications__message">
+              <p>
+                <a href="#" class="notifications__name-link">Anna Kim</a>left
+                the group
+                <a href="#" class="notifications__group-link">Chess Club</a>
+              </p>
+              <div class="notifications__time">2 weeks ago</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Developed by Rashid Shamloo</p>
+      <ul class="footer-icon">
+        <li>
+          <a
+            href="https://rashidshamloo.github.com"
+            title="GitHub"
+            target="_blank"
+            ><i class="bi-github" aria-hidden="true"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/rashid-shamloo/"
+            title="Linked-in"
+            target="_blank"
+            ><i class="bi-linkedin" aria-hidden="true"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://twitter.com/rashidshamloo"
+            title="Twitter"
+            target="_blank"
+            ><i class="bi-twitter" aria-hidden="true"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,221 @@
+//font
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+
+//CSS Reset
+//CSS Reset
+@import "modern-normalize.min";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+//colors
+$white: hsl(0, 0%, 100%);
+$veryLightGrayishBlue: hsl(210, 60%, 98%);
+$lightGrayishBlue1: hsl(211, 68%, 94%);
+$lightGrayishBlue2: hsl(205, 33%, 90%);
+$grayishBlue: hsl(219, 14%, 63%);
+$darkGrayishBlue: hsl(219, 12%, 42%);
+$veryDarkBlue: hsl(224, 21%, 14%);
+$blue: #08327b;
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  min-height: 100vh;
+  color: $veryDarkBlue;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.notifications {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 1rem;
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    h2 {
+      font-size: 1.28rem;
+    }
+    > a {
+      margin-left: auto;
+      text-decoration: none;
+      color: $darkGrayishBlue;
+      font-size: 0.85rem;
+    }
+  }
+  &__number {
+    padding: 0.25rem 0.75rem;
+    background-color: $blue;
+    color: $white;
+    border-radius: 0.4rem;
+    font-weight: 800;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.75rem;
+  }
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    font-size: 0.9rem;
+    border-radius: 0.5rem;
+    padding: 1rem 0.75rem;
+    transition: all 500ms;
+    > img:first-child {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-right: 0.9rem;
+    }
+  }
+  &__item--unread {
+    background-color: $veryLightGrayishBlue;
+  }
+  &__name-link {
+    font-weight: 800;
+    color: $veryDarkBlue;
+    margin-right: 0.4rem;
+    font-size: 0.92rem;
+    text-decoration: none;
+  }
+  &__post-link {
+    color: $darkGrayishBlue;
+    margin-left: 0.25rem;
+    font-weight: 800;
+    text-decoration: none;
+  }
+  &__group-link {
+    color: $blue;
+    margin-left: 0.25rem;
+    font-weight: 800;
+    text-decoration: none;
+  }
+  &__image-link {
+    border: 0.1rem solid $white;
+    border-radius: 0.5rem;
+    line-height: 0;
+    margin-left: auto;
+    padding: 0.1rem;
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+  &__message {
+    color: $darkGrayishBlue;
+    line-height: 1.15rem;
+  }
+  &__time {
+    color: $grayishBlue;
+    margin-top: 0.2rem;
+    font-size: 0.85rem;
+  }
+  &__unread-icon {
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: red;
+    border-radius: 50%;
+    margin-left: 0.3rem;
+    border: 0.1rem solid darken(red, 10%);
+  }
+  &__private-message {
+    display: block;
+    padding: 0.75rem;
+    border: 0.1rem solid $lightGrayishBlue2;
+    border-radius: 0.35rem;
+    margin-top: 0.75rem;
+    p {
+      line-height: 1.15rem;
+    }
+  }
+}
+footer {
+  color: $darkGrayishBlue;
+  margin: 1rem 0 0.5rem 0;
+  p {
+    font-size: 0.8rem;
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.25rem;
+    li {
+      padding: 0 0.5rem;
+      a {
+        color: $darkGrayishBlue;
+        transition: color 300ms;
+      }
+    }
+    li + li {
+      border-left: 0.1rem solid $darkGrayishBlue;
+    }
+  }
+}
+//media queries
+@media only screen and (pointer: fine) {
+  .notifications {
+    &__header {
+      a:hover {
+        color: $blue;
+      }
+    }
+    &__message {
+      a:hover {
+        color: $blue;
+      }
+    }
+    &__private-message:hover {
+      cursor: pointer;
+      background-color: $lightGrayishBlue1;
+    }
+    &__image-link:hover {
+      border: 0.1rem solid $lightGrayishBlue1;
+    }
+  }
+}
+footer {
+  ul {
+    li {
+      a:hover {
+        color: $veryDarkBlue;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 650px) {
+  html {
+    font-size: 18px;
+  }
+  body {
+    background-color: $veryLightGrayishBlue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .notifications {
+    background-color: white;
+    border-radius: 1rem;
+    max-width: 40.67rem;
+    padding: 2rem;
+    margin: 1rem;
+    &__number {
+      padding: 0.2rem 0.65rem;
+      font-size: 0.9rem;
+      margin-left: 0.7rem;
+    }
+    &__image-link:hover {
+      border: 0.1rem solid $grayishBlue;
+    }
+  }
+}
