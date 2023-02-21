@@ -159,7 +159,7 @@ body {
   align-items: center;
   margin-bottom: 0.5rem;
 }
-.notifications__header h2 {
+.notifications__header h1 {
   font-size: 1.28rem;
 }
 .notifications__header > a {
